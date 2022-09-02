@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="tasks.css">
+        <title>WEEKLY SCHEDULE APP</title>
+        <style>
+            * {
+                --weeklySummaryFontSize: 1.8rem;
+                --weeklySummaryPadding: 1.2rem;    
+            }
+            .day {
+                height: calc(
+                    (var(--mainHeight) 
+                    - var(--weeklySummaryFontSize) 
+                    - var(--weeklySummaryPadding)) 
+                    / 7);
+            }
+            .day:nth-of-type(even) {
+                background-color: lightyellow;
+            }
+            .tasks {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            .weekly-summary {
+                font-size: var(--weeklySummaryFontSize);
+                padding: var(--weeklySummaryPadding);
+            }
+        </style>
+    </head>
+    <body>
+        <header>Weekly Schedule ✅</header>
+        <main id="WeeklySchedule"></main>
+        <footer>@coderjohn</footer>
+        <script src="index.js"></script>
+    </body>
+</html>
